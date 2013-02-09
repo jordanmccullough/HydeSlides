@@ -1,0 +1,30 @@
+
+<div class="reveal"><!--RevealJS Wrapper Open-->
+	<div class="slides"><!--Slide Deck Open-->
+		{% for ch in page.chapters %}
+			<section><!--Chapters & Section Content-->
+				{% for section in site.tags[ch] reversed %}<!--Hijacked file naming;Standard Chono-order-->
+					{% if forloop.first %}<!--Chapter Cover Auto-Injection-->
+						{% if section.chapter != '' %}<!--No Chap. Cover Given YAML is empty or falsy-->
+							{% if section.cover != false %}
+								{% include slide-open-chapter %}
+									<h1>{{ section.chapter }}</h1>
+								{% include slide-close %}
+							{% endif %}
+						{% endif %}
+					{% endif %}
+
+					{% include slide-open %}
+						{% if section.chapter != '' %}
+							<div class="chapter-banner">{{ section.chapter }}</div>
+						{% endif %}
+						{% if section.title != '' %}
+							<h2>{{ section.title }}</h2>
+						{% endif %}
+						{{ section.content }}
+					{% include slide-close %}
+				{% endfor %}
+			</section>
+		{% endfor %}
+	</div><!--Slide Deck Open-->
+</div><!--RevealJS Wrapper Close-->
