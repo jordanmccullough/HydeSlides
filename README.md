@@ -17,7 +17,7 @@ Example "chapter" content is located in the `_posts` directory. Markdown files a
 A chapter consists of a `_posts/<yourchapter>` folder and markdown files. Each markdown file must begin with four YAML front matter fields: `chapter`, `layout`, `title`, `tags`:
 
 * `chapter` serves as the string for the auto-generated cover slide
-* `layout` controls the layout of the file `[TODO: correct this description. The field was missing in this list, so I added it, but I'm not really sure what it does]`
+* `layout` must set to `slidedeck`
 * `title` must be a string or, to hide the slide header, an empty string, or "false"
 * `tags` for simplicity sake is only assigned one value, usually the same name as the chapter folder
 
