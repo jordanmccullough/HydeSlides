@@ -12,33 +12,35 @@ Creating a new slide deck and building "chapter" content is easy:
 
 ## Creating new Chapter Content
 
-Example "chapter" content for is located in the `_posts` directory. Subfolders of markdown files are used for ease of human-readable content.
+Example "chapter" content is located in the `_posts` directory. Markdown files are used for content and grouped into folders to make everything as human-readable as possible.
 
-A chapter consists of a `_posts/<yourchapter>` and markdown files consisting of four YAML front matter fields: `chapter`, `layout`, `title`, `tags`.
+A chapter consists of a `_posts/<yourchapter>` folder and markdown files. Each markdown file must begin with four YAML front matter fields: `chapter`, `layout`, `title`, `tags`:
 
 * `chapter` serves as the string for the auto-generated cover slide
+* `layout` must set to `slidedeck`
 * `title` must be a string or, to hide the slide header, an empty string, or "false"
 * `tags` for simplicity sake is only assigned one value, usually the same name as the chapter folder
 
 ### Notes
 
-Speaker notes, only shown on the "split" screen displayed by presseing the S key, are included on slides in an HTML wrapped element with `class="notes"`.
+Speaker notes, only shown on the "split" screen, are displayed by pressing the S key. They are included on slides in an HTML wrapped element with `class="notes"`:
 
 	{% include hydeslides/notes-open %}
-	  Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+	  Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them
+	  if you open the speaker notes window (hit 's' on your keyboard).
 	{% include hydeslides/notes-close %}
 
 ### Slide Deck "What's Next" Feature
 
-Pressing S will launch the slide deck What's Next with presenter notes (if any are in the original slide markdown).
+Pressing S will launch the slide deck with the "What's Next" feature (showing the next slide) alongside the presenter notes (if any notes are in the original slide markdown).
 
 ## Theming
 
 Custom themes are forthcoming for HydeSlides.
 
 ## Dependencies 
-* SASS theming is found under `/dependencies/theme/css` and controls all ReavealJS and slide presentation overrides
-* Graphical and JS dependencies centrally stored in `/dependencies`
+* SASS theming is found under `/dependencies/theme/css` and controls all RevealJS and slide presentation overrides
+* Graphical and JS dependencies are centrally stored in `/dependencies`
 * Assets used throughout any slide deck should be stored in `/assets`
 
 ---
