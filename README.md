@@ -41,7 +41,23 @@ Custom themes are forthcoming for HydeSlides.
 ## Dependencies 
 * SASS theming is found under `/dependencies/theme/css` and controls all RevealJS and slide presentation overrides
 * Graphical and JS dependencies are centrally stored in `/dependencies`
+  * RevealJS is a Git submodule of HydeSlides, stored in `/dependencies/revealjs`
 * Assets used throughout any slide deck should be stored in `/assets`
+
+## Installation
+
+Before you can use HydeSlides, you need to install the RevealJS submodule into your copy of HydeSlides:
+
+```
+git submodule init
+git submodule update
+```
+
+To run HydeSlides, you need to have already installed Ruby and Jekyll. To run HydeSlides you need only to run Jekyll in your HydeSlides repository:
+
+```
+jekyll --server --auto
+```
 
 ---
 
