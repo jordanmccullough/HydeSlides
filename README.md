@@ -61,7 +61,7 @@ jekyll --server --auto
 
 ---
 
-Thanks to the contributors of HydeSlide's core components and features: Tom Preston-Werner for Jekyll, Hakim El Hattab for Reveal-JS, and Dave Gandy for Font-Awesome.
+Thanks to the contributors of HydeSlide's core components and features: [Tom Preston-Werner](https://github.com/mojombo) for [Jekyll](https://github.com/mojombo/jekyll), [Hakim El Hattab](http://hakim.se/) for [Reveal-JS](http://lab.hakim.se/reveal-js/), and [Dave Gandy](mailto:dave@davegandy.com) for [Font-Awesome](http://fortawesome.github.com/Font-Awesome/).
 
 ---
 
