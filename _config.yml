@@ -3,3 +3,5 @@ server: true
 
 title: "HydeSlides : A Monster of a Slide Deck"
 description: "HydeSlides : A Monster of a Slide Deck"
+
+chapters: ['overview', 'features']
