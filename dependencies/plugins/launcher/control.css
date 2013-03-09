@@ -1,0 +1,140 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html,body{
+	margin: 0;
+	padding: 1%;
+	background: #eee;
+	color: #333;
+	font-family: sans-serif;
+	font-size: 12px;
+	background: #333;
+}
+
+.panel{
+	width: auto;
+	height: 86%;
+	padding: 2%;
+	background: #eee;
+	border-radius: .5em;
+	overflow-y: auto;
+	position: relative;
+	background: #eee;
+}
+
+.panel.w50{
+	width: 48%;
+}
+.panel.w30{
+	width: 28%;
+}
+
+.controls{
+	display: none;
+	position: absolute;
+}
+
+.notes{
+}
+
+.toc{
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 1px 0 0 0;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+}
+	.toc h1{
+		font-size: .75em;
+		margin:0;
+		padding:0;
+		padding: .5em;
+		background: #888;
+		text-transform:uppercase;
+		box-shadow: inset 0 0 5px 0 #666, 0 1px 0 0 #eee, inset 0 -1px 0 0 #777;
+		border-radius: .5em;
+		color: #fff;
+		text-shadow: 1px 0px 1px #555; /*, 1px 1px 1px #444;*/
+	}
+	
+
+	.toc ul{
+		margin: 0;
+		padding: 0;
+	}
+	.toc ul::after{
+		content: '';
+		position: absolute;
+		top: .5em;
+		height: 100%;
+		box-shadow: 0 0 0 1px #ccc, 0 -10px 9px 1px #aaa;
+		border-radius: 50%;
+	}
+	.toc > li{
+		font-weight: bold;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 1em;
+	}
+	.toc ul li{
+		font-weight: normal;
+		list-style-type: none;
+		margin: .25em 0 .25em -10%;
+		width: 100%;
+		padding: 0;
+		position: relative;
+	}
+	.toc a{
+		padding: 3px 0 3px 20%;
+		color: #555;
+		text-decoration: none;
+		border-radius: 0 .5em .5em 0 / 0 .5em .5em 0;
+		-webkit-transition: padding 300ms, margin 300ms;
+		display: inline-block;
+		text-transform: lowercase;
+		width: 85%;
+		text-shadow: 0 0 1px #eee;
+	}
+	.toc a::after{
+		content: '';
+		position: absolute;
+		left: 0;
+		margin-top: 7px;
+		width:2em;
+		height:0px;
+		box-shadow: 0 0 0 1px #ccc;
+		border-radius: 50%;
+	}
+	.toc a:hover{
+		color: #000;
+		text-shadow: 0 0 1px #555;
+	}
+	.toc .active::after{
+		box-shadow: none;
+	}
+	.toc .active, .toc .active:hover{
+		text-shadow: 0 0 1px #555;
+		padding-left: 25%;
+		color: #fff;
+		text-decoration:none;
+
+		background: #9ecb2d;
+
+	}
+	.toc .active::before{
+		content: '';
+		position: absolute;
+		/*left: -6px;*/
+		margin-left: -15%;
+		top: 0;
+		width: 0; 
+		height: 0; 
+		border-top: 10px solid #eee;
+		border-bottom: 10px solid #eee; 
+		border-right: 10px solid #9ecb2d; 
+	}

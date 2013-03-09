@@ -1,3 +1,127 @@
+.t-of-c{
+	font-size: .5em;
+	width: 20%;
+	height: 100%;
+	position: absolute;
+	overflow: scroll;
+	z-index: 10000;
+	right: 0;
+}
+	.t-of-c a{
+		text-decoration: none;
+		color: $mnch-dark;
+	}
+	.t-of-c ul{
+		margin: 0 0 .25em 0;
+		padding:0;
+		text-align: left;
+		text-transform: capitalize;
+		list-style-type: none;
+	}
+		.t-of-c ul ul{
+			margin-left: .5em;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-switch {
+	position: relative;
+  width: 100%;
+  margin-top: .5em;
+}
+ 
+ 
+.toggle-switch label { 
+	position: absolute;
+	right: .5em;
+	display: block; 
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+	background: $mnch-medium;
+	/*margin: auto auto;*/
+	text-align: center;
+	border-radius: .185em;
+}
+	.toggle-switch label span{
+		display: block;
+		width: 1em;
+		height: 1em;
+		transition: all 2s;
+		-webkit-transition: margin 300ms;
+	}
+	.toggle-switch label span{
+		font-size: .5em;
+		padding: .5em;
+		text-align: center;
+	}
+	.toggle-switch label span:nth-child(1){
+		color: $mnch-light;
+	}
+	.toggle-switch label span:nth-child(2){
+		color: $mnch-bright;
+	}
+.toggle-switch input:checked ~ label {
+	background: $mnch-dark;
+	color: $mnch-bright;
+}
+.toggle-switch input:checked ~ label span:nth-child(1){
+	margin-top: -2em;
+}
+ 
+
+.mobi-menu{
+	visibility: hidden;
+	z-index: 10000;
+	left: 0;
+	margin-top: 1em;
+	width: 100%;
+	height: 0;
+	background: #fff;
+	position: absolute;
+	text-transform: uppercase;
+	text-align: center;
+
+	box-shadow: 0 3em 2em 2em white;
+}
+.toggle-switch input:checked ~ .mobi-menu{
+	visibility: visible;
+	position: absolute;
+	background: #fff;
+	height: auto;
+}
+.mobi-menu li{
+	width: 100%;
+}
+
+.toggle-switch input { 
+	display:none; 
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .reveal .brand{
 	background: url(../branding/hydeslides.png) no-repeat center;
 	background-size: contain;

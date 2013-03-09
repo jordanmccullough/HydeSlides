@@ -1,0 +1,42 @@
+<div class="t-of-c">
+	<div class="toggle-switch">
+		<input type="checkbox" id="toggle-1" />
+		<label for="toggle-1">
+			<span><i class="icon-reorder"></i></span><span><i class="icon-arrow-up"></i></span>
+		</label>
+		<div class="mobi-menu">
+			<ul>
+				{% for ch in page.chapters %}
+					{% assign chapterIndex = forloop.index0 %}
+					<li>{{ ch }}
+						{% for section in site.tags[ch] reversed %}
+							<ul>
+								<li>
+									<a class="toc-link" href="/#/{{ chapterIndex }}/{{ forloop.index0 }}">
+										{{ section.title }}
+										{% if section.title == '' %}
+											No Title
+										{% endif %}
+									</a>
+								</li>
+							</ul>
+						{% endfor %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var links = document.getElementsByClassName("toc-link");
+	for(var i=0; i < links.length; i++ ){
+		links[i].addEventListener( 'click', tocClick, true );
+	}
+
+	var tocClick = function(){
+		console.log("click");
+	}
+</script>
+
+
