@@ -1,3 +1,6 @@
 [submodule "dependencies/revealjs"]
 	path = dependencies/revealjs
 	url = https://github.com/hakimel/reveal.js.git
+[submodule "dependencies/plugins"]
+	path = dependencies/plugins
+	url = https://github.com/jordanmccullough/hydeslides-plugins.git
