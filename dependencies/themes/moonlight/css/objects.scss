@@ -1,0 +1,191 @@
+.t-of-c{
+	font-size: .5em;
+	width: 20%;
+	height: 100%;
+	position: absolute;
+	overflow: scroll;
+	z-index: 10000;
+	right: 0;
+}
+	.t-of-c a{
+		text-decoration: none;
+		color: $mnch-dark;
+	}
+	.t-of-c ul{
+		margin: 0 0 .25em 0;
+		padding:0;
+		text-align: left;
+		text-transform: capitalize;
+		list-style-type: none;
+	}
+		.t-of-c ul ul{
+			margin-left: .5em;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-switch {
+	position: relative;
+  width: 100%;
+  margin-top: .5em;
+}
+ 
+ 
+.toggle-switch label { 
+	position: absolute;
+	right: .5em;
+	display: block; 
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+	background: $mnch-medium;
+	/*margin: auto auto;*/
+	text-align: center;
+	border-radius: .185em;
+}
+	.toggle-switch label span{
+		display: block;
+		width: 1em;
+		height: 1em;
+		transition: all 2s;
+		-webkit-transition: margin 300ms;
+	}
+	.toggle-switch label span{
+		font-size: .5em;
+		padding: .5em;
+		text-align: center;
+	}
+	.toggle-switch label span:nth-child(1){
+		color: $mnch-light;
+	}
+	.toggle-switch label span:nth-child(2){
+		color: $mnch-bright;
+	}
+.toggle-switch input:checked ~ label {
+	background: $mnch-dark;
+	color: $mnch-bright;
+}
+.toggle-switch input:checked ~ label span:nth-child(1){
+	margin-top: -2em;
+}
+ 
+
+.mobi-menu{
+	visibility: hidden;
+	z-index: 10000;
+	left: 0;
+	margin-top: 1em;
+	width: 100%;
+	height: 0;
+	background: #fff;
+	position: absolute;
+	text-transform: uppercase;
+	text-align: center;
+
+	box-shadow: 0 3em 2em 2em white;
+}
+.toggle-switch input:checked ~ .mobi-menu{
+	visibility: visible;
+	position: absolute;
+	background: #fff;
+	height: auto;
+}
+.mobi-menu li{
+	width: 100%;
+}
+
+.toggle-switch input { 
+	display:none; 
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reveal .brand{
+	background: url(../branding/hydeslides.png) no-repeat center;
+	background-size: contain;
+	height: 6em;
+	width: 98%;
+	opacity: .85;
+	margin: auto auto 1em auto;
+	-webkit-transition: background 2s;
+	-moz-transition: background 2s;
+	transition: background 2s;
+}
+
+/*Chapter Identifier Headers for Sub-Sections*/
+.reveal .chapter-banner{
+	background: $color-light;
+	width: 50%;
+	margin: 0 auto .5em auto;
+	color: $mnch-bright;
+	text-transform: uppercase;
+}
+	.reveal .chapter-banner::before{
+		content: '';
+		display: inline-block;
+		float: left;
+		border-color: $color-light $color-light $color-light transparent;
+	  border-style:solid;
+	  border-width: 18px 14px 18px 12px;
+	  width:0;
+	  height:0;
+	  margin-left: -20px;
+	  margin-top: 5px;
+	}
+	.reveal .chapter-banner::after{
+		content: '';
+		display: inline-block;
+		float: right;
+		border-color: $color-light transparent $color-light $color-light;
+	  border-style:solid;
+	  border-width: 18px 14px 18px 12px;
+	  width:0;
+	  height:0;
+	  margin-right: -20px;
+	  margin-top: 5px;
+	}
+
+/*Stage Building Diagrams*/
+.diagram-group{
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	background: $mnch-bright;
+	box-shadow: 10px 0 0 0 $mnch-bright, -10px 0 0 0 $mnch-bright, 0 0 30px $mnch-medium;
+	border-radius: .5em;
+	overflow: hidden;
+}
+	.reveal section .fragment.diagram{
+		background: $mnch-bright;
+		max-height: 100%;
+	}
+	.reveal section .fragment.diagram:nth-child(n+2){
+		display: none;
+	}
+	.reveal section .fragment.diagram.visible:nth-child(n+2){
+		display: block;
+		top: 0;
+		position: absolute;
+	}
