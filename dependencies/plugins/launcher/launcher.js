@@ -19,7 +19,7 @@
 	};
 
 	launcher.hashChange = function(event){
-		controller.display.postMessage(JSON.stringify(launcher.formatHash()), 'http://localhost:4000/dependencies/plugins/launcher/control.html');
+		controller.display.postMessage(JSON.stringify(launcher.formatHash()), window.location.origin + '/dependencies/plugins/launcher/control.html');
 	};
 
 	document.addEventListener("keydown", launcher.keyDown, false);
