@@ -1,16 +1,16 @@
 
 <div class="reveal"><!--RevealJS Wrapper Open-->
 	<div class="slides"><!--Slide Deck Open-->
-		{% for ch in page.chapters %}
+		{% for ch in site.chapters %}
 			<section><!--Chapters & Section Content-->
 				{% for section in site.tags[ch] reversed %}<!--Hijacked file naming;Standard Chono-order-->
 					{% if forloop.first %}<!--Chapter Cover Auto-Injection-->
-						{% if section.chapter != '' %}<!--No Chap. Cover Given YAML is empty or falsy-->
-							{% if section.cover != false %}
+
+							{% if section.cover != false %}<!--No Chap. Cover Given YAML is empty or falsy-->
 								{% include slide-open-chapter %}
 									<h1>{{ section.chapter }}</h1>
 								{% include slide-close %}
-							{% endif %}
+
 						{% endif %}
 					{% endif %}
 
