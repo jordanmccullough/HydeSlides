@@ -13,8 +13,6 @@
 /*Chapter Identifier Headers for Sub-Sections*/
 .reveal .chapter-banner{
 	font-family: $font-title;
-	color: $mid-mnch;
-	margin: 0 auto .5em auto;
 }
 
 
@@ -24,12 +22,12 @@
 	max-width: 100%;
 	max-height: 100%;
 	background: $bright-color;
-	box-shadow: 10px 0 0 0 $mnch-bright, -10px 0 0 0 $mnch-bright, 0 0 30px $mnch-medium;
+	box-shadow: 10px 0 0 0 $bright-mnch, -10px 0 0 0 $bright-mnch, 0 0 30px $mid-mnch;
 	border-radius: .5em;
 	overflow: hidden;
 }
 	.reveal section .fragment.diagram{
-		background: $mnch-bright;
+		background: $bright-color;
 		max-height: 100%;
 	}
 	.reveal section .fragment.diagram:nth-child(n+2){
