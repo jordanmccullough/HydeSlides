@@ -4,16 +4,11 @@ i[class^="icon-"]{
 	font-style: normal;
 }
 
-/*Default RevealJS scales images too large for GitHub theme*/
-.reveal img, .reveal iframe{
-	max-height: 77%;
-}
-
 /* Background Watermark */
 body::before{
 	content: "";
   -webkit-mask-box-image: url(../branding/hydeslides.png) 100% 100% 0 0;
-  background: $color-medium;
+  background: $bright-mnch;
   position: absolute;
   opacity: .05;
   height: 100%;
@@ -31,7 +26,7 @@ body::after{
 	height: 1em;
 	width: 100%;
 	text-align: center;
-	color: $color-light;
+	color: $mid-mnch;
 	font-size: .3em;
 	padding-top: .5em;
 	padding-bottom: .5em;
@@ -39,22 +34,5 @@ body::after{
 }
 
 code, em{
-	color: $mnch-bright;
+	color: $mid-mnch;
 }
-
-/* Optional RevealJS Override for Hyphenation (where supported) */
-/*
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-	-webkit-hyphens: none;
-	   -moz-hyphens: none;
-	        hyphens: none;
-
-	word-break: none;
-	word-break: none;
-}
-*/
