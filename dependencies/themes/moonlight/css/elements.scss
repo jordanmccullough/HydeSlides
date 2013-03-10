@@ -6,26 +6,22 @@ body {
   font-size: 38px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: $mnch-dark;
+  color: $mid-mnch;
+  background:  $background-solid;
 
-  background: $mnch-bright; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover,  $mnch-bright 7%, $mnch-light 85%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(7%,$mnch-bright), color-stop(85%,$mnch-light)); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  $mnch-bright 7%,$mnch-light 85%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  $mnch-bright 7%,$mnch-light 85%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  $mnch-bright 7%,$mnch-light 85%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  $mnch-bright 7%,$mnch-light 85%); /* W3C */
-}
-
-.reveal section img.diagram{
- /* No Op*/
- border: none;
- box-shadow: none;
+  background: #505f6b; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #505f6b 12%, #303841 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(12%,#505f6b), color-stop(100%,#303841)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #505f6b 12%,#303841 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #505f6b 12%,#303841 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #505f6b 12%,#303841 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center, #505f6b 12%,#303841 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505f6b', endColorstr='#303841',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 ::selection {
-  color: $mnch-dark;
-  background: $alt-light;
+  color: $bright-mnch;
+  background: $bright-color;
   text-shadow: none;
 }
 
@@ -45,29 +41,18 @@ body {
 
 .reveal h1 {
   font-family: $font-title;
-  text-transform: uppercase;
   font-size: 3em;
   letter-spacing: -.05em;
-  color: $mnch-dark;
-  text-shadow: 2px 2px 3px $mnch-medium, -1px 2px 0 $mnch-light, 0 3px 0 $mnch-medium, 0 2px 0 $mnch-light;
-  /*border-top: solid 2px $color-light;
-  border-bottom: solid 2px $color-light;*/
+  color: $bright-mnch;
+  text-shadow: 2px 2px 3px $dark-mnch, -1px 2px 0 $mnch-light, 0 3px 0 $mnch-medium, 0 2px 0 $mnch-light;
 }
 .reveal h2{
   font-size: 1.8em;
-  font-family: $font-content;
-  color: $color-dark;
-  text-shadow: 0 0 2px $mnch-bright;
+  font-family: $font-title;
+  color: $bright-color;
+  text-shadow: 0 2px 3px $dark-mnch;
   margin: auto auto .5em auto;
 }
-  h1 + h2::before{
-    content: '';
-    border-top: solid 2px $color-dark;
-    height: .25em;
-    margin-top: .15em;
-    width: 100%;
-    display: block;
-  }
 
 .reveal h3{
   font-size: 1.2em;
@@ -79,7 +64,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: $mnch-dark;
+  color: $bright-mnch;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -89,14 +74,14 @@ body {
 }
 
 .reveal a:not(.image):hover {
-  color: $color-medium;
+  color: $bright-mnch;
   text-shadow: none;
   border: none;
 }
 
 .reveal .roll span:after {
   color: #fff;
-  background: $color-medium;
+  background: $bright-color;
 }
 
 /*********************************************
@@ -162,11 +147,11 @@ body {
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: $color-dark;
+  background: $dark-mnch;
 }
 
 .reveal .progress span {
-  background: $color-light;
+  background: $mid-mnch;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
