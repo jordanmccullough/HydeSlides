@@ -15,9 +15,11 @@
 					{% endif %}
 
 					{% include slide-open %}
-						{% if section.chapter != '' %}
-							<div class="chapter-banner">{{ section.chapter }}</div>
-						{% endif %}
+						{% comment %}
+							{% if section.chapter != '' %}
+								<div class="chapter-banner">{{ section.chapter }}</div>
+							{% endif %}
+						{% endcomment %}
 						{% if section.title != '' %}
 							<h2>{{ section.title }}</h2>
 						{% endif %}

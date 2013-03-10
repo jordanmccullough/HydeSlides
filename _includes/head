@@ -18,6 +18,3 @@
 
 <!--Core RevealJS and FontAwesome-->
 <link rel="stylesheet" href="dependencies/themes/core/css/core.css">	
-
-<!--Default Style-->
-<link rel="stylesheet" href="dependencies/themes/default/css/theme.css">	
