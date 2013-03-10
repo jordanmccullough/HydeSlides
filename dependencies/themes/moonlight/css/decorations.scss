@@ -13,6 +13,7 @@
 }
 
 .reveal .sticky{
+	color: $dark-mnch;
 	font-family: $font-handwriting;
 	background: $sticky-bright;
 	box-shadow: 1px 1px .09em $mnch-dark, 0px -1px .15em $mnch-light, inset 0 0 3em $sticky-medium;
@@ -43,7 +44,6 @@
 	.reveal .sticky h1{
 		font-size: 2.2em;
 		font-weight: 600;
-		color: $sticky-dark;
 		text-shadow: none;
 		text-transform: uppercase;
 		margin: 0;
@@ -51,6 +51,5 @@
 	}
 	.reveal .sticky h2{
 		font-size: 1.3em;
-		color: $sticky-dark;
 		text-shadow: none;
 	}

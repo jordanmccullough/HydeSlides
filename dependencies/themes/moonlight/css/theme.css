@@ -1,7 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Tienne:400,700);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
-@import url(http://fonts.googleapis.com/css?family=Montserrat|Lusitana);
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
 /* Overrides, Design, Theme */
 /*Colors*/
 /*Sticky*/
@@ -43,6 +41,9 @@ body::after {
   padding-bottom: .5em;
   opacity: .4; }
 
+code, em {
+  color: #f1f1f1; }
+
 /* Optional RevealJS Override for Hyphenation (where supported) */
 /*
 .reveal h1,
@@ -60,6 +61,12 @@ body::after {
 }
 */
 /* No HydeSlides layouts defined yet */
+/*
+@import url(http://fonts.googleapis.com/css?family=Tienne:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+@import url(http://fonts.googleapis.com/css?family=Montserrat|Lusitana);
+*/
 .strike-out {
   text-decoration: line-through;
   color: #f10000; }
@@ -74,6 +81,7 @@ body::after {
   color: #f10000; }
 
 .reveal .sticky {
+  color: #2b2c25;
   font-family: "Coming Soon";
   background: #fffab4;
   box-shadow: 1px 1px 0.09em #232322, 0px -1px 0.15em #e1e1e1, inset 0 0 3em #e5cd62;
@@ -108,7 +116,6 @@ body::after {
 .reveal .sticky h1 {
   font-size: 2.2em;
   font-weight: 600;
-  color: #9e7300;
   text-shadow: none;
   text-transform: uppercase;
   margin: 0;
@@ -116,41 +123,38 @@ body::after {
 
 .reveal .sticky h2 {
   font-size: 1.3em;
-  color: #9e7300;
   text-shadow: none; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  font-family: "Tienne", serif;
+  font-family: "Roboto", serif;
   font-size: 38px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: #232322;
-  background: #f1f1f1;
+  color: #b9c5d4;
+  background: #2b2c25;
+  background: #505f6b;
   /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #f1f1f1 7%, #e1e1e1 85%);
+  background: -moz-radial-gradient(center, ellipse cover, #505f6b 12%, #303841 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(7%, #f1f1f1), color-stop(85%, #e1e1e1));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(12%, #505f6b), color-stop(100%, #303841));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #f1f1f1 7%, #e1e1e1 85%);
+  background: -webkit-radial-gradient(center, ellipse cover, #505f6b 12%, #303841 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #f1f1f1 7%, #e1e1e1 85%);
+  background: -o-radial-gradient(center, ellipse cover, #505f6b 12%, #303841 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #f1f1f1 7%, #e1e1e1 85%);
+  background: -ms-radial-gradient(center, ellipse cover, #505f6b 12%, #303841 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, #f1f1f1 7%, #e1e1e1 85%);
-  /* W3C */ }
-
-.reveal section img.diagram {
-  /* No Op*/
-  border: none;
-  box-shadow: none; }
+  background: radial-gradient(ellipse at center, #505f6b 12%, #303841 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#505f6b', endColorstr='#303841',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
 
 ::selection {
-  color: #232322;
-  background: #fff799;
+  color: #eeeeee;
+  background: #1aafec;
   text-shadow: none; }
 
 /*********************************************
@@ -167,29 +171,18 @@ body {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h1 {
-  font-family: "Tienne", serif;
-  text-transform: uppercase;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 3em;
   letter-spacing: -.05em;
-  color: #232322;
-  text-shadow: 2px 2px 3px #333333, -1px 2px 0 #e1e1e1, 0 3px 0 #333333, 0 2px 0 #e1e1e1;
-  /*border-top: solid 2px $color-light;
-  border-bottom: solid 2px $color-light;*/ }
+  color: #eeeeee;
+  text-shadow: 2px 2px 3px #2b2c25, -1px 2px 0 #e1e1e1, 0 3px 0 #333333, 0 2px 0 #e1e1e1; }
 
 .reveal h2 {
   font-size: 1.8em;
-  font-family: "Tienne", serif;
-  color: #4c0909;
-  text-shadow: 0 0 2px #f1f1f1;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #1aafec;
+  text-shadow: 0 2px 3px #2b2c25;
   margin: auto auto 0.5em auto; }
-
-h1 + h2::before {
-  content: '';
-  border-top: solid 2px #4c0909;
-  height: .25em;
-  margin-top: .15em;
-  width: 100%;
-  display: block; }
 
 .reveal h3 {
   font-size: 1.2em;
@@ -200,7 +193,7 @@ h1 + h2::before {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #232322;
+  color: #eeeeee;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -209,13 +202,13 @@ h1 + h2::before {
   transition: color 0.15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #613132;
+  color: #eeeeee;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #613132; }
+  background: #1aafec; }
 
 /*********************************************
  * IMAGES
@@ -270,107 +263,15 @@ h1 + h2::before {
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: #4c0909; }
+  background: #2b2c25; }
 
 .reveal .progress span {
-  background: #de5053;
+  background: #b9c5d4;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-
-.t-of-c {
-  font-size: .5em;
-  width: 20%;
-  height: 100%;
-  position: absolute;
-  overflow: scroll;
-  z-index: 10000;
-  right: 0; }
-
-.t-of-c a {
-  text-decoration: none;
-  color: #232322; }
-
-.t-of-c ul {
-  margin: 0 0 0.25em 0;
-  padding: 0;
-  text-align: left;
-  text-transform: capitalize;
-  list-style-type: none; }
-
-.t-of-c ul ul {
-  margin-left: .5em; }
-
-.toggle-switch {
-  position: relative;
-  width: 100%;
-  margin-top: .5em; }
-
-.toggle-switch label {
-  position: absolute;
-  right: .5em;
-  display: block;
-  overflow: hidden;
-  width: 1em;
-  height: 1em;
-  background: #333333;
-  /*margin: auto auto;*/
-  text-align: center;
-  border-radius: .185em; }
-
-.toggle-switch label span {
-  display: block;
-  width: 1em;
-  height: 1em;
-  transition: all 2s;
-  -webkit-transition: margin 300ms; }
-
-.toggle-switch label span {
-  font-size: .5em;
-  padding: .5em;
-  text-align: center; }
-
-.toggle-switch label span:nth-child(1) {
-  color: #e1e1e1; }
-
-.toggle-switch label span:nth-child(2) {
-  color: #f1f1f1; }
-
-.toggle-switch input:checked ~ label {
-  background: #232322;
-  color: #f1f1f1; }
-
-.toggle-switch input:checked ~ label span:nth-child(1) {
-  margin-top: -2em; }
-
-.mobi-menu {
-  visibility: hidden;
-  z-index: 10000;
-  left: 0;
-  margin-top: 1em;
-  width: 100%;
-  height: 0;
-  background: #fff;
-  position: absolute;
-  text-transform: uppercase;
-  text-align: center;
-  box-shadow: 0 3em 2em 2em white; }
-
-.toggle-switch input:checked ~ .mobi-menu {
-  visibility: visible;
-  position: absolute;
-  background: #fff;
-  height: auto; }
-
-.mobi-menu li {
-  width: 100%; }
-
-.toggle-switch input {
-  display: none;
-  margin: 0;
-  padding: 0; }
 
 .reveal .brand {
   background: url(../branding/hydeslides.png) no-repeat center;
@@ -385,42 +286,16 @@ h1 + h2::before {
 
 /*Chapter Identifier Headers for Sub-Sections*/
 .reveal .chapter-banner {
-  background: #de5053;
-  width: 50%;
-  margin: 0 auto 0.5em auto;
-  color: #f1f1f1;
-  text-transform: uppercase; }
-
-.reveal .chapter-banner::before {
-  content: '';
-  display: inline-block;
-  float: left;
-  border-color: #de5053 #de5053 #de5053 transparent;
-  border-style: solid;
-  border-width: 18px 14px 18px 12px;
-  width: 0;
-  height: 0;
-  margin-left: -20px;
-  margin-top: 5px; }
-
-.reveal .chapter-banner::after {
-  content: '';
-  display: inline-block;
-  float: right;
-  border-color: #de5053 transparent #de5053 #de5053;
-  border-style: solid;
-  border-width: 18px 14px 18px 12px;
-  width: 0;
-  height: 0;
-  margin-right: -20px;
-  margin-top: 5px; }
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #b9c5d4;
+  margin: 0 auto 0.5em auto; }
 
 /*Stage Building Diagrams*/
 .diagram-group {
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  background: #f1f1f1;
+  background: #1aafec;
   box-shadow: 10px 0 0 0 #f1f1f1, -10px 0 0 0 #f1f1f1, 0 0 30px #333333;
   border-radius: .5em;
   overflow: hidden; }

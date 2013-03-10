@@ -38,6 +38,10 @@ body::after{
 	opacity: .4;
 }
 
+code, em{
+	color: $mnch-bright;
+}
+
 /* Optional RevealJS Override for Hyphenation (where supported) */
 /*
 .reveal h1,
