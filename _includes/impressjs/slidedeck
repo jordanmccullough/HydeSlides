@@ -1,0 +1,65 @@
+
+
+<div id="impress">
+
+	{{ page.chapters }}
+
+	{% assign chapterPos = 0 %}
+	{% assign slidePos = 0 %}
+
+	{% for ch in page.chapters %}
+
+		{% for section in site.tags[ch] reversed %}
+			<div class="step slide" >
+				{{ section.title }}
+				{{ section.content }}
+			</div>
+
+			{% capture slidePos %}
+				{{ slidePos | plus: 1500 }}
+			{% endcapture %}
+
+		{% endfor %}
+
+		{% capture chapterPos %}
+			{{ chapterPos | plus: 1000 }}
+		{% endcapture %}
+	{% endfor %}
+
+</div>
+
+
+{% comment %}
+<div class="reveal"><!--RevealJS Wrapper Open-->
+	<div class="slides"><!--Slide Deck Open-->
+		{% for ch in page.chapters %}
+
+			<section><!--Chapters & Section Content-->
+				{% for section in site.tags[ch] reversed %}<!--Hijacked file naming;Standard Chono-order-->
+					{% if forloop.first %}<!--Chapter Cover Auto-Injection-->
+
+							{% if section.cover != false %}<!--No Chap. Cover Given YAML is empty or falsy-->
+								{% include revealjs/slide-open-chapter %}
+									<h1>{{ section.chapter }}</h1>
+								{% include revealjs/slide-close %}
+
+						{% endif %}
+					{% endif %}
+
+					{% include revealjs/slide-open %}
+						{% comment %}
+							{% if section.chapter != '' %}
+								<div class="chapter-banner">{{ section.chapter }}</div>
+							{% endif %}
+						{% endcomment %}
+						{% if section.title != '' %}
+							<h2>{{ section.title }}</h2>
+						{% endif %}
+						{{ section.content }}
+					{% include revealjs/slide-close %}
+				{% endfor %}
+			</section>
+		{% endfor %}
+	</div><!--Slide Deck Open-->
+</div><!--RevealJS Wrapper Close-->
+{% endcomment %}
