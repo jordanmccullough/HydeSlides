@@ -1,14 +1,10 @@
-
 <div id="impress">
 		{% assign xPos = 2000 %}
-		{% assign yPos = -1500 %}
-
 		{% for ch in page.chapters %}
-
+			{% assign yPos = 0 %}
 			{% for section in site.tags[ch] reversed %}
 				<div class="step slide" data-x="{{ xPos }}" data-y="{{ yPos }}">
 					<h1>{{ section.title }}</h1>
-					
 					{{ section.content }}
 				</div>
 
