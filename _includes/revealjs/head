@@ -1,7 +1,7 @@
 <meta charset="utf-8">
-<title>{{ site.title }}</title>
+<title>{{ page.title }}</title>
 
-<meta name="description" content="{{ site.description }}">
+<meta name="description" content="{{ page.description }}">
 <meta name="author" content="Jordan McCullough">
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
