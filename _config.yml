@@ -1,8 +1,3 @@
 auto: true
 server: true
 
-title: "HydeSlides : A Monster of a Slide Deck"
-description: "HydeSlides : A Monster of a Slide Deck"
-theme: "cobalt"
-
-chapters: ['overview', 'features']
