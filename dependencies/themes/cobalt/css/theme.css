@@ -63,7 +63,7 @@ code, em {
   font-family: "Coming Soon";
   background: #fffab4;
   box-shadow: 1px 1px 0.09em #2b2c25, 0px -1px 0.15em #a4a59a, inset 0 0 3em #e5cd62;
-  border-radius: 5em 10em 0.25em 1.5em/0.25em 0.25em 1em 0.25em;
+  border-radius: 5em 10em .25em 1.5em / 0.25em 0.25em 1em .25em;
   width: 50%;
   margin: 0 auto;
   padding: 1em 1em 1em 1em;
@@ -150,7 +150,7 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
   color: #1aafec;
   text-shadow: 0 2px 3px #2b2c25;
-  margin: auto auto 0.5em auto; }
+  margin: auto auto .5em auto; }
 
 .reveal h3 {
   font-size: 1.2em;
@@ -163,11 +163,11 @@ body {
 .reveal a:not(.image) {
   color: #eeeeee;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  -ms-transition: color 0.15s ease;
-  -o-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
   color: #eeeeee;
@@ -185,11 +185,11 @@ body {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 0 8px #eeeeee, 0 0 0 9px #2b2c25;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
 
 .reveal a:hover img {
   background: #a4a59a;
@@ -277,3 +277,84 @@ body {
   display: block;
   top: 0;
   position: absolute; }
+
+@-webkit-keyframes zoom-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0, 0); }
+
+  to {
+    opacity: 100;
+    -webkit-transform: scale(1, 1); } }
+
+@-webkit-keyframes slide-down {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, -300px); }
+
+  to {
+    opacity: 100; } }
+
+@-webkit-keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, 300px); }
+
+  to {
+    opacity: 100; } }
+
+@-webkit-keyframes slide-right {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-300px, 0); }
+
+  to {
+    opacity: 100; } }
+
+@-webkit-keyframes slide-left {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(300px, 0); }
+
+  to {
+    opacity: 100; } }
+
+@-webkit-keyframes deflate {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(3, 3); }
+
+  to {
+    opacity: 100; } }
+
+.future > .zoom-in, .past > .zoom-in, .fragment > .zoom-in,
+.future > .slide-down, .past > .slide-down, .fragment > .slide-down,
+.future > .slide-up, .past > .slide-up, .fragment > .slide-up,
+.future > .slide-right, .past > .slide-right, .fragment > .slide-right,
+.future > .slide-left, .past > .slide-left, .fragment > .slide-left,
+.future > .deflate, .past > .deflate, .fragment > .deflate {
+  -webkit-animation: none; }
+
+/* Zoom-In */
+.reveal .present > .zoom-in, .reveal .present .fragment.visible .zoom-in {
+  -webkit-animation: zoom-in 1s; }
+
+/* Slide-Down */
+.reveal .present > .slide-down, .reveal .present .fragment.visible .slide-down {
+  -webkit-animation: slide-down 1s; }
+
+/* Slide-Up */
+.reveal .present > .slide-up, .reveal .present .fragment.visible .slide-up {
+  -webkit-animation: slide-up 1s; }
+
+/* Slide-Right */
+.reveal .present > .slide-right, .reveal .present .fragment.visible .slide-right {
+  -webkit-animation: slide-right 1s; }
+
+/* Slide-Left */
+.reveal .present > .slide-left, .reveal .present .fragment.visible .slide-left {
+  -webkit-animation: slide-left 1s; }
+
+/* Defalte */
+.reveal .present > .deflate, .reveal .present .fragment.visible .deflate {
+  -webkit-animation: deflate 1s; }
