@@ -5,6 +5,9 @@
 /*Sticky*/
 /*Alternate*/
 /* Override to resolve Font-Awesome and RevealJS styling on icon- */
+.slide {
+  background-color: none; }
+
 i[class^="icon-"] {
   font-family: FontAwesome;
   font-style: normal; }
@@ -138,21 +141,22 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1 {
+h1 {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 3em;
   letter-spacing: -.05em;
   color: #eeeeee;
-  text-shadow: 2px 2px 3px #2b2c25, -1px 2px 0 #2b2c25, 0 3px 0 #b9c5d4, 0 2px 0 #eeeeee; }
+  text-shadow: 2px 2px 3px #2b2c25, -1px 2px 0 #2b2c25, 0 3px 0 #b9c5d4, 0 2px 0 #eeeeee;
+  text-align: center; }
 
-.reveal h2 {
+h2 {
   font-size: 1.8em;
   font-family: "Montserrat Alternates", sans-serif;
   color: #1aafec;
   text-shadow: 0 2px 3px #2b2c25;
   margin: auto auto .5em auto; }
 
-.reveal h3 {
+h3 {
   font-size: 1.2em;
   color: #eeeeee;
   font-weight: normal; }
@@ -160,7 +164,7 @@ body {
 /*********************************************
  * LINKS
  *********************************************/
-.reveal a:not(.image) {
+a:not(.image) {
   color: #eeeeee;
   text-decoration: none;
   -webkit-transition: color .15s ease;
@@ -169,19 +173,19 @@ body {
   -o-transition: color .15s ease;
   transition: color .15s ease; }
 
-.reveal a:not(.image):hover {
+a:not(.image):hover {
   color: #eeeeee;
   text-shadow: none;
   border: none; }
 
-.reveal .roll span:after {
+.roll span:after {
   color: #fff;
   background: #1aafec; }
 
 /*********************************************
  * IMAGES
  *********************************************/
-.reveal section img {
+section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 0 8px #eeeeee, 0 0 0 9px #2b2c25;
@@ -191,7 +195,7 @@ body {
   -o-transition: all .2s linear;
   transition: all .2s linear; }
 
-.reveal a:hover img {
+a:hover img {
   background: #a4a59a;
   border-color: #a4a59a;
   box-shadow: 0 0 20px #2b2c25; }
@@ -199,41 +203,41 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.navigate-left,
-.reveal .controls div.navigate-left.enabled {
+.controls div.navigate-left,
+.controls div.navigate-left.enabled {
   border-right-color: #2b2c25; }
 
-.reveal .controls div.navigate-right,
-.reveal .controls div.navigate-right.enabled {
+.controls div.navigate-right,
+.controls div.navigate-right.enabled {
   border-left-color: #2b2c25; }
 
-.reveal .controls div.navigate-up,
-.reveal .controls div.navigate-up.enabled {
+.controls div.navigate-up,
+.controls div.navigate-up.enabled {
   border-bottom-color: #2b2c25; }
 
-.reveal .controls div.navigate-down,
-.reveal .controls div.navigate-down.enabled {
+.controls div.navigate-down,
+.controls div.navigate-down.enabled {
   border-top-color: #2b2c25; }
 
-.reveal .controls div.navigate-left.enabled:hover {
+.controls div.navigate-left.enabled:hover {
   border-right-color: #2b2c25; }
 
-.reveal .controls div.navigate-right.enabled:hover {
+.controls div.navigate-right.enabled:hover {
   border-left-color: #2b2c25; }
 
-.reveal .controls div.navigate-up.enabled:hover {
+.controls div.navigate-up.enabled:hover {
   border-bottom-color: #2b2c25; }
 
-.reveal .controls div.navigate-down.enabled:hover {
+.controls div.navigate-down.enabled:hover {
   border-top-color: #2b2c25; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
-.reveal .progress {
+.progress {
   background: #2b2c25; }
 
-.reveal .progress span {
+.progress span {
   background: #b9c5d4;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -242,7 +246,7 @@ body {
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 .brand {
-  background: url(../branding/hydeslides.png) no-repeat center #777777;
+  background: url(../branding/hydeslides.png) no-repeat center;
   background-size: contain;
   height: 6em;
   width: 98%;
