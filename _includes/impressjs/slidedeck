@@ -1,20 +1,31 @@
 <div id="impress">
-		{% assign xPos = 0 %}
-		{% for ch in page.chapters %}
-			{% assign yPos = 0 %}
-			{% for section in site.tags[ch] reversed %}
-				<div class="step slide" data-x="{{ xPos }}" data-y="{{ yPos }}">
-					<h1>{{ section.title }}</h1>
-					{{ section.content }}
-				</div>
+	{% assign xPos = 0 %}
+	{% for ch in page.chapters %}
+		{% assign yPos = 0 %}
+		{% for section in site.tags[ch] reversed %}
+			{% if forloop.first %}
+				{% if section.cover != false %}
+					<div class="step slide" data-x="{{ xPos }}" data-y="{{ yPos }}">
+						<h1>{{ section.chapter }}</h1>
+					</div>
+					{% capture yPos %}
+						{{ yPos | plus: 1500 }}
+					{% endcapture %}
+				{% endif %}
+			{% endif %}
 
-				{% capture yPos %}
-					{{ yPos | plus: 1500 }}
-				{% endcapture %}
-			{% endfor %}
+			<div class="step slide" data-x="{{ xPos }}" data-y="{{ yPos }}">
+				<h2>{{ section.title }}</h2>
+				{{ section.content }}
+			</div>
 
-			{% capture xPos %}
-				{{ xPos | plus: 2000 }}
+			{% capture yPos %}
+				{{ yPos | plus: 1500 }}
 			{% endcapture %}
 		{% endfor %}
+
+		{% capture xPos %}
+			{{ xPos | plus: 2000 }}
+		{% endcapture %}
+	{% endfor %}
 </div>
