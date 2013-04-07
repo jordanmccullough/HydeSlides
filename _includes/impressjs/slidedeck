@@ -1,7 +1,7 @@
 <div id="impress">
 	{% assign xPos = 0 %}
 
-	{% assign coverRotate = 45 %}
+	{% assign coverRotate = 90 %}
 
 	
 
