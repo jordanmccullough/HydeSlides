@@ -56,7 +56,7 @@ git submodule update
 To run HydeSlides, you need to have already installed Ruby and Jekyll. To run HydeSlides you need only to run Jekyll in your HydeSlides repository:
 
 ```
-jekyll --server --auto
+jekyll serve --watch
 ```
 
 ---
