@@ -1,5 +1,7 @@
 # HydeSlides
 
+HydeSlides is a template for making HTML slide decks using Jekyll, with RevealJS or ImpressJS.  [Fork](https://help.github.com/articles/fork-a-repo) or clone this repository to get started!
+
 ## Building from Existing Chapters
 
 Creating a new slide deck and building "chapter" content is easy:
